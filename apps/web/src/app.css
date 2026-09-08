@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #18201d;
+  --color-canvas: #f4f5ef;
+  --color-line: #dfe2d8;
+  --color-moss: #37624d;
+  --color-lime: #d8f36a;
+  --color-clay: #d96f4c;
+}
+
+html { background: #f4f5ef; color: #18201d; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #d8f36a; color: #18201d; }
+
+.panel { @apply rounded-2xl border border-line bg-white shadow-[0_1px_0_rgba(24,32,29,.04)]; }
+.label { @apply mb-1.5 block text-xs font-bold uppercase tracking-[0.12em] text-ink/55; }
+.field { @apply w-full rounded-xl border border-line bg-canvas/60 px-3.5 py-2.5 text-sm outline-none transition focus:border-moss focus:ring-2 focus:ring-moss/10; }
+.btn-primary { @apply rounded-xl bg-ink px-4 py-2.5 text-sm font-bold text-white transition hover:bg-moss disabled:cursor-not-allowed disabled:opacity-40; }
+.btn-secondary { @apply rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-bold transition hover:border-ink/30 hover:bg-canvas; }
