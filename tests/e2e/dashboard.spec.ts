@@ -67,7 +67,7 @@ test(
 );
 
 test(
-  'declares and resolves an incident',
+  'declares an incident',
   async ({ page }) => {
     const incidentTitle =
       `Portal response errors ${randomUUID()}`;
